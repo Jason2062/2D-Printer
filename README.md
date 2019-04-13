@@ -9,20 +9,21 @@ For the print we designed，what we would like to achieve is: <br>
 
 # Required package
 ## How to install QT5 and QT Creator
-sudo apt-get update <br> ~~改代码块~~ 
-sudo apt-get upgrade <br> 
+```
+sudo apt-get update
+sudo apt-get upgrade 
 
-Install QT5 <br>
+//Install QT5 
 
 sudo apt-get install qt5-default
 
-Install QT creator
+//Install QT creator
 
 sudo apt-get install qtcreator
-
+```
 ## How to install wiringPi
 
-
+```
 git clone git://git.drogon.net/wiringPi
 
 cd wiringPi
@@ -31,7 +32,7 @@ cd wiringPi
 Type “gpio -v” to test
 
 Type “gpio readall’ to check pin information
-
+```
 
 # Result
 
