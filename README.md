@@ -8,6 +8,30 @@ For the print we designed，what we would like to achieve is: <br>
  3.In the future applications the printer can achieve more purpose by replacing UV pen with other tools.<br> 
 
 # Required package
+## How to install QT5 and QT Creator
+sudo apt-get update <br> ~~改代码块~~ 
+sudo apt-get upgrade <br> 
+
+Install QT5 <br>
+
+sudo apt-get install qt5-default
+
+Install QT creator
+
+sudo apt-get install qtcreator
+
+## How to install wiringPi
+
+
+git clone git://git.drogon.net/wiringPi
+
+cd wiringPi
+./build
+
+Type “gpio -v” to test
+
+Type “gpio readall’ to check pin information
+
 
 # Result
 
