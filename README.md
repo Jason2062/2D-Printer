@@ -7,7 +7,12 @@
  # Software Design
  
 # Flow Chart
+
+GUI程序由鼠标的点击和移动触发。通过控制鼠标移动时，根据x，y轴坐标与先前数值的对比结果，不同线程开始工作，控制电机运转，实现对笔的xyz三轴控制。
+
 ![flow chart](https://github.com/Jason2062/2D-Printer/blob/master/Images/Flow%20chart.png)
+
+
 # Required Package
 ## How to install QT5 and QT Creator
 ```
@@ -35,4 +40,5 @@ Type “gpio -v” to test
 Type “gpio readall’ to check pin information
 ```
 
+# Documentation
 
