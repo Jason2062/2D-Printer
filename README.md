@@ -38,9 +38,9 @@ git clone git://git.drogon.net/wiringPi
 cd wiringPi
 ./build
 
-Type “gpio -v” to test
+Type "gpio -v" to test
 
-Type “gpio readall’ to check pin information
+Type "gpio readall" to check pin information
 ```
 
 # Documentation
