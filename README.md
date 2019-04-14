@@ -1,6 +1,6 @@
 # 2D-Printer
 
-![whole view](https://github.com/Jason2062/2D-Printer/blob/master/Images/whole%20view.jpg)
+![2d printer](https://github.com/Jason2062/2D-Printer/blob/master/Images/2D%20printer.jpg)
 
 
  
