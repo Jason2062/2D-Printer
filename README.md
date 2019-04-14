@@ -1,4 +1,5 @@
 # 2D-Printer
+This project is a realtime writing machine, which enable user to write information remotely. This design controls the movement of the pen on the x and y axes through two stepping motors and the up and down movement of the pen through a servo motor. The [Wiki page](https://github.com/Jason2062/2D-Printer/wiki) details how to recreate the machine.<br>
 
 ![2d printer](https://github.com/Jason2062/2D-Printer/blob/master/Images/2D%20printer.jpg)
 
