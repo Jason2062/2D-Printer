@@ -1,6 +1,6 @@
 # 2D-Printer
 
-# Gerenal Info
+![whole view](https://github.com/Jason2062/2D-Printer/blob/master/Images/whole%20view.jpg)
 
 
  
