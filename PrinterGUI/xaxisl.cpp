@@ -9,6 +9,9 @@ xAxisL::xAxisL()
 }
 
 //turn left by 7.2°.
+/**
+ * @brief xAxisL::run run threads which turn left the x Motor by 7.2°.
+ */
 void xAxisL::run()
 {
 

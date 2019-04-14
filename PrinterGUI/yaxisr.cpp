@@ -8,6 +8,9 @@ yAxisR::yAxisR()
 
 }
 //turn left by 7.2°.
+/**
+ * @brief yAxisR::run run thread yAxisR which turn left y Motor by 7.2°.
+ */
 void yAxisR::run()
 {
     digitalWrite(26,HIGH);

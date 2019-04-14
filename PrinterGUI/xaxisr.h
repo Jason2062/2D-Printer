@@ -2,7 +2,10 @@
 #define XAXISR_H
 
 #include <QThread>
-// Create threads which turn the motor that controls the X direction to the right by 7.2°.
+// threads which turn the motor that controls the X direction to the right by 7.2°.
+/**
+ * @brief The xAxisR class thread which turn the motor that controls the X direction to the left by 7.2°.
+ */
 class xAxisR : public QThread
 {
 

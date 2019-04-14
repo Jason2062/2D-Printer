@@ -13,24 +13,27 @@
 
 #include "wiringPi.h"
 #include "softPwm.h"
-
+/**
+ * @brief Widget::Widget
+ * @param parent
+ */
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
     //create motor Threads
-    xThreadr = new xAxisR();
-    xThreadl = new xAxisL();
+    xThreadr = new xAxisR(); //!< turn right xmotor threads
+    xThreadl = new xAxisL(); //!< turn left  xmotor threads
 
-    yThreadr = new yAxisR();
-    yThreadl = new yAxisL();
+    yThreadr = new yAxisR(); //!< turn right ymotor threads
+    yThreadl = new yAxisL(); //!M turn left  ymotor threads
 
     //set painter
 
     //set backcolor=white
-    QColor backcolor =qRgb(255,255,255);
-    //set the size of white board
-    m_image =QImage(2000,2000,QImage::Format_RGB32);
+    QColor backcolor =qRgb(255,255,255);//!<set the color of paint board.
+    //set the size of paint board
+    m_image =QImage(2000,2000,QImage::Format_RGB32);//!< set the size of paint board.
     //fill the white board
     m_image.fill(backcolor);
 
@@ -43,11 +46,14 @@ Widget::Widget(QWidget *parent) :
     ui->xPosSpinBox->setValue(cursor().pos().x());
     ui->yPosSpinBox->setValue(cursor().pos().y());
     //set the range of coordinates
-    configureSpinBox(ui->xPosSpinBox, 0, +INT_MAX);
-    configureSpinBox(ui->yPosSpinBox, 0, +INT_MAX);
+    configureSpinBox(ui->xPosSpinBox, 0, +INT_MAX);//!< configure the display range of spinBox
+    configureSpinBox(ui->yPosSpinBox, 0, +INT_MAX);//!< configure the display range of spinBox
     qDebug()<<"Hello"<<123;
 
     //set pinMode which controls the stepper motor rotation and servo motor.
+    /**
+     * @brief wiringPiSetup set pinMode which controls the stepper motor ration and servo motor.
+     */
     wiringPiSetup();
     //stepper motor on x axis
     pinMode(22,OUTPUT);
@@ -71,7 +77,10 @@ Widget::~Widget()
 
 
 
-
+/**
+ * @brief Widget::mousePressEvent Create a mousePressEvent function. In this function, the servoState(pen) movement can be switched by mousePress event.
+ * @param event
+ */
 void Widget::mousePressEvent(QMouseEvent *event)
 {
     //painter: when mousePress happen, record the fisrt coordinate. mousePress always happens before mouseMove
@@ -102,11 +111,16 @@ void Widget::mousePressEvent(QMouseEvent *event)
     QWidget::mousePressEvent(event);
 
 }
-
+/**
+ * @brief Widget::mouseMoveEvent define a mouseMoveEvent function. In this function, the path of mouseMove can be recorded by painter when the state of servomotor is true.
+ * @param event
+ */
 void Widget::mouseMoveEvent(QMouseEvent *event)
 {
     //when mouseMove happens, record the second coordinates. and connected with the first coordinate by painter.
+
     m_curPoint=event->pos();
+
     QPainter painter(&m_image);
     QPen pen;
     pen.setColor(Qt::red);
@@ -123,18 +137,28 @@ void Widget::mouseMoveEvent(QMouseEvent *event)
 
 
     //onMouseEvent
+
     onMouseEvent("Move", event->pos());
 
     QWidget::mouseMoveEvent(event);
 }
 
-
+/**
+ * @brief Widget::configureSpinBox In this function, the display range can be set.
+ * @param spinBox name of spinBox
+ * @param min min number
+ * @param max max number
+ */
 void Widget::configureSpinBox(QSpinBox *spinBox, int min, int max) const
 {
     spinBox->setMinimum(min);
     spinBox->setMaximum(max);
 }
-
+/**
+ * @brief Widget::onMouseEvent In this function, the coordinate of mouse will be recorded and compared with previous number when mouseMoveEvent and mousePressEvent happens.
+ * @param eventName
+ * @param pos
+ */
 void Widget::onMouseEvent(const QString &eventName, const QPoint &pos)
 {
     //display the event of mouse
@@ -170,13 +194,17 @@ void Widget::onMouseEvent(const QString &eventName, const QPoint &pos)
     ui->xPosSpinBox->setValue(pos.x());
     ui->yPosSpinBox->setValue(pos.y());
 }
-
+/**
+ * @brief Widget::paintEvent draw image of mousepath
+ */
 void Widget::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     painter.drawImage(0,0,m_image);
 }
-
+/**
+ * @brief Widget::on_pushButton_clicked In this function, the paint board will be reset once the refresh button is clicked.
+ */
 void Widget::on_pushButton_clicked()
 {
     //When press click refresh button, reset backboard.

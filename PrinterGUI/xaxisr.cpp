@@ -8,6 +8,9 @@ xAxisR::xAxisR()
 
 }
 //turn right by 7.2°.
+/**
+ * @brief xAxisR::run run xAxisR thread which turn right the x Motor by 7.2°.
+ */
 void xAxisR::run()
 {
     digitalWrite(22,LOW);
