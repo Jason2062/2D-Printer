@@ -1,0 +1,147 @@
+\hypertarget{class_widget}{}\section{Widget Class Reference}
+\label{class_widget}\index{Widget@{Widget}}
+
+
+The \mbox{\hyperlink{class_widget}{Widget}} class.  
+
+
+
+
+{\ttfamily \#include $<$widget.\+h$>$}
+
+Inheritance diagram for Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_widget}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_widget_a29531c7f141e461322981b3b579d4590}{Widget}} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_widget_a29531c7f141e461322981b3b579d4590}{Widget\+::\+Widget}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_widget_adb0d8836552ee8b48214c1a32a7e5246}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+push\+Button\+\_\+clicked refresh button is defined. Once button is clicked, the paint board will be clear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_widget_ae67612ab62d0a43c6ebd3759b883cdd2}{mouse\+Move\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Move\+Event In this function, the mouse movements was recorded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_widget_a681594b94d8b48c7e7b669268f3baf81}{mouse\+Press\+Event}} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em mouse\+Press\+Event In this function, mouse\+Press is used to trigger the state of servo motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_widget_af755e8891f462562c88c37735345a798}{paint\+Event}} (Q\+Paint\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em paint\+Event generate image \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_widget}{Widget}} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_widget_a29531c7f141e461322981b3b579d4590}\label{class_widget_a29531c7f141e461322981b3b579d4590}} 
+\index{Widget@{Widget}!Widget@{Widget}}
+\index{Widget@{Widget}!Widget@{Widget}}
+\subsubsection{\texorpdfstring{Widget()}{Widget()}}
+{\footnotesize\ttfamily Widget\+::\+Widget (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_widget_a29531c7f141e461322981b3b579d4590}{Widget\+::\+Widget}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+$<$ turn right xmotor threads
+
+$<$ turn left xmotor threads
+
+$<$ turn right ymotor threads
+
+M turn left ymotor threads
+
+$<$set the color of paint board.
+
+$<$ set the size of paint board.
+
+$<$ configure the display range of spin\+Box
+
+$<$ configure the display range of spin\+Box
+
+wiring\+Pi\+Setup set pin\+Mode which controls the stepper motor ration and servo motor.
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_widget_ae67612ab62d0a43c6ebd3759b883cdd2}\label{class_widget_ae67612ab62d0a43c6ebd3759b883cdd2}} 
+\index{Widget@{Widget}!mouseMoveEvent@{mouseMoveEvent}}
+\index{mouseMoveEvent@{mouseMoveEvent}!Widget@{Widget}}
+\subsubsection{\texorpdfstring{mouseMoveEvent()}{mouseMoveEvent()}}
+{\footnotesize\ttfamily void Widget\+::mouse\+Move\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+mouse\+Move\+Event In this function, the mouse movements was recorded. 
+
+\mbox{\hyperlink{class_widget_ae67612ab62d0a43c6ebd3759b883cdd2}{Widget\+::mouse\+Move\+Event}} define a mouse\+Move\+Event function. In this function, the path of mouse\+Move can be recorded by painter when the state of servomotor is true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & when mouse\+Move happens, run this function.\\
+\hline
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_widget_a681594b94d8b48c7e7b669268f3baf81}\label{class_widget_a681594b94d8b48c7e7b669268f3baf81}} 
+\index{Widget@{Widget}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Widget@{Widget}}
+\subsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Widget\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+mouse\+Press\+Event In this function, mouse\+Press is used to trigger the state of servo motor. 
+
+\mbox{\hyperlink{class_widget_a681594b94d8b48c7e7b669268f3baf81}{Widget\+::mouse\+Press\+Event}} Create a mouse\+Press\+Event function. In this function, the servo\+State(pen) movement can be switched by mouse\+Press event.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & when mouse\+Press happens, run this function\\
+\hline
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_widget_adb0d8836552ee8b48214c1a32a7e5246}\label{class_widget_adb0d8836552ee8b48214c1a32a7e5246}} 
+\index{Widget@{Widget}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!Widget@{Widget}}
+\subsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void Widget\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+push\+Button\+\_\+clicked refresh button is defined. Once button is clicked, the paint board will be clear. 
+
+\mbox{\hyperlink{class_widget_adb0d8836552ee8b48214c1a32a7e5246}{Widget\+::on\+\_\+push\+Button\+\_\+clicked}} In this function, the paint board will be reset once the refresh button is clicked. \mbox{\Hypertarget{class_widget_af755e8891f462562c88c37735345a798}\label{class_widget_af755e8891f462562c88c37735345a798}} 
+\index{Widget@{Widget}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Widget@{Widget}}
+\subsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void Widget\+::paint\+Event (\begin{DoxyParamCaption}\item[{Q\+Paint\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+paint\+Event generate image 
+
+\mbox{\hyperlink{class_widget_af755e8891f462562c88c37735345a798}{Widget\+::paint\+Event}} draw image of mousepath.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+widget.\+h\item 
+widget.\+cpp\end{DoxyCompactItemize}
