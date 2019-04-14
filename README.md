@@ -7,7 +7,7 @@
  # Software Design
  
 # Flow Chart
-![flow chart](https://github.com/Jason2062/2D-Printer/blob/master/IMG_0833.jpeg)
+![flow chart](https://github.com/Jason2062/2D-Printer/blob/master/Images/Flow%20chart.png)
 # Required Package
 ## How to install QT5 and QT Creator
 ```
