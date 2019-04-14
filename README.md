@@ -9,7 +9,9 @@ This project is a realtime writing machine, which enable user to write informati
  
 # Flow Chart
 
-GUI程序由鼠标的点击和移动触发。用户控制鼠标移动时，根据x，y轴坐标与先前数值的对比结果，开启不同线程工作，控制电机运转，实现对笔的xy轴控制。当鼠标点击时，切换伺服电机状态，实现笔尖收起和释放（实现笔尖上下控制）
+
+The program is triggered by mouse clicks and movements. When the user moving the mouse, according to the comparison results of the x and y axis coordinates between their previous values, different threads are triggered to control the stepper motor rotating clockwise or anticlockwise and realize the x and y axis movement control of the pen. When the mouse is clicked, the Raspberry Pi switch the servo motor state to realize the pen point moving up and down. Besides, the GUI porvides the brush record to facilitate the user to see the pattern printed by the 2D printer. 
+
 
 ![flow chart](https://github.com/Jason2062/2D-Printer/blob/master/Images/Flow%20chart.png)
 
