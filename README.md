@@ -7,7 +7,7 @@ For the print we designed，what we would like to achieve is: <br>
  2.Offer assit in the creation od complex UV paintings. <br> 
  3.In the future applications the printer can achieve more purpose by replacing UV pen with other tools.<br> 
  
- 
+ # Software Design
  
 # Flow Chart
 ![flow chart](https://github.com/Jason2062/2D-Printer/blob/master/IMG_0833.jpeg)
